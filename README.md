@@ -203,6 +203,13 @@ Los servicios web permiten:
 
 ### SpringBoot
 
+- Cuando nos acompamos a un framework, tenemos muchas ventajas, pero tambien estamos atados a su schedule:
+    - https://spring.io/projects/spring-boot#support
+- Spring nació como un framework de Inyección de Depedencias.
+    - Se encarga de instanciar e inyectar colaboradores en los objetos.
+    - No cualquier objeto, básicamente los servicios, connection a la BD, etc.
+    - Las entidades, value objects no lo puede hacer, son stateful.
+
 ### Exception Handling Global
 
 - Queremos manejar las excepciones de forma global y para ello el framework Web que usamos en general nos da una forma
