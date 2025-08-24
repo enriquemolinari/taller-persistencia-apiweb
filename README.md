@@ -201,36 +201,6 @@ Los servicios web permiten:
 | PUT    | `200 OK` / `204 No Content` | Actualización o creación de recurso    |
 | DELETE | `200 OK` / `204 No Content` | Ok o Eliminación exitosa sin contenido |
 
-### SpringBoot
-
-- Cuando nos acompamos a un framework, tenemos muchas ventajas, pero tambien estamos atados a su schedule:
-    - https://spring.io/projects/spring-boot#support
-- Spring nació como un framework de Inyección de Depedencias.
-    - Se encarga de instanciar e inyectar colaboradores en los objetos.
-    - No cualquier objeto, básicamente los servicios, connection a la BD, etc.
-    - Las entidades, value objects no lo puede hacer, son stateful.
-
-### Exception Handling Global
-
-- Queremos manejar las excepciones de forma global y para ello el framework Web que usamos en general nos da una forma
-  de hacerlo.
-- Usar `@RestControllerAdvice` para anotar una clase que maneje excepciones globalmente.
-- Dentro de esa clase, podemos definir métodos que manejen excepciones específicas usando
-  `@ExceptionHandler(Exception.class)`.
-
-### Testing Integracion Servicios Web
-
-- MockMvc and WebTestClient: [Spring Docs](https://docs.spring.io/spring-framework/reference/testing.html).
-- MockMvc ejecuta el controller y todo el stack en memoria, sin servidor, sin red. Perfecto para tests de integración
-  rápidos y realistas a nivel de capa web.
-- La otra es WebTestCliente como cliente y levantar un server real con @SpringBootTest(webEnvironment =
-  WebEnvironment.DEFINED_PORT o RANDOM_PORT))
-- Teniendo Tests escritos unitario y de integración a nivel servicio. ¿Qué podemos testear de la capa web?
-    - Todo lo relacionado a las pocas líneas de código que debería haber en el controlador. Pero principalmente:
-        - Que lleguen bien los parametros
-        - Que retorne el json que esperamos en el formato que esperamos
-        - Que retorne errores en el formato que esperamos.
-
 ## Troubleshooting
 
 - Si tenes este error:
