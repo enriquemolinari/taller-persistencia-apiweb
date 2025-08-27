@@ -46,10 +46,17 @@ public class Contacto {
     public int cantidadDeTelefonos() {
         return this.telefonos.size();
     }
-    
+
     public boolean tieneElTelefono(String telefono) {
         return this.telefonos.stream()
                 .anyMatch(numero -> numero.numero().equals(telefono));
+    }
+
+    public ContactoInfo toInfo() {
+        var telefonosInfo = this.telefonos.stream()
+                .map(NumeroTelefono::numero)
+                .toList();
+        return new ContactoInfo(this.id, this.nombre.nombre(), telefonosInfo);
     }
 }
 

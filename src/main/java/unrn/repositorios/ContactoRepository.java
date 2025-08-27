@@ -2,6 +2,7 @@ package unrn.repositorios;
 
 import jakarta.persistence.EntityManager;
 import unrn.model.Contacto;
+import unrn.model.ContactoInfo;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,5 +16,5 @@ public interface ContactoRepository {
 
     void agregar(Contacto contacto);
 
-    List<Contacto> listar(int pageNumber);
+    List<ContactoInfo> listar(int pageNumber);
 }

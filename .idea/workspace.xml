@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="solo falta el test de integracion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" afterDir="false" />
+    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="saco la explicacion de la capa web">
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/console/ContactosImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/main/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/model/ContactoInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/NuevoContacto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AppTestConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/repositorios/ContactoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/repositorios/ContactoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -58,7 +72,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "JUnit.AgendaTelefonicaControllerTest.executor": "Run",
+    "JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor": "Run",
     "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
     "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
     "JUnit.AgendaTelefonicaTest.executor": "Run",
@@ -71,12 +87,14 @@
     "JUnit.unrn.model in taller-persistencia-apiweb.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindow.Run.ShowToolbar": "false",
     "git-widget-placeholder": "capa-web-service-repositorios",
     "kotlin-language-version-configured": "true",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,7 +105,51 @@
       <recent name="unrn.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.model in taller-persistencia-apiweb">
+  <component name="RunManager" selected="JUnit.AgendaTelefonicaControllerTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unrn.main.Main" />
+      <module name="taller-persistencia-apiweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unrn.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AgendaTelefonicaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taller-persistencia-apiweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unrn.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unrn.web" />
+      <option name="MAIN_CLASS_NAME" value="unrn.web.AgendaTelefonicaControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AgendaTelefonicaControllerTest.getContactos_listaContactosOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taller-persistencia-apiweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unrn.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unrn.web" />
+      <option name="MAIN_CLASS_NAME" value="unrn.web.AgendaTelefonicaControllerTest" />
+      <option name="METHOD_NAME" value="getContactos_listaContactosOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AgendaTelefonicaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taller-persistencia-apiweb" />
       <extension name="coverage">
@@ -103,53 +165,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taller-persistencia-apiweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unrn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unrn.service" />
-      <option name="MAIN_CLASS_NAME" value="unrn.service.AgendaTelefonicaTest" />
-      <option name="METHOD_NAME" value="agregarContactoNuevo_contactoSeAgrega" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taller-persistencia-apiweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unrn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unrn.model" />
-      <option name="MAIN_CLASS_NAME" value="unrn.model.ContactoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactoTest.crearContacto_nombreValido_instanciaCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taller-persistencia-apiweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unrn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unrn.model" />
-      <option name="MAIN_CLASS_NAME" value="unrn.model.ContactoTest" />
-      <option name="METHOD_NAME" value="crearContacto_nombreValido_instanciaCorrecta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="model in taller-persistencia-apiweb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taller-persistencia-apiweb" />
       <option name="TEST_OBJECT" value="directory" />
@@ -160,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.model in taller-persistencia-apiweb" />
+        <item itemvalue="JUnit.AgendaTelefonicaControllerTest" />
+        <item itemvalue="JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk" />
         <item itemvalue="JUnit.AgendaTelefonicaTest" />
-        <item itemvalue="JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega" />
-        <item itemvalue="JUnit.ContactoTest" />
-        <item itemvalue="JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.model in taller-persistencia-apiweb" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +265,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/unrn/service/AgendaTelefonicaTest.java</url>
           <line>20</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

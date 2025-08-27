@@ -2,6 +2,7 @@ package unrn.repositorios;
 
 import jakarta.persistence.EntityManager;
 import unrn.model.Contacto;
+import unrn.model.ContactoInfo;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,10 +28,11 @@ class JpaContactoRepository implements ContactoRepository {
     }
 
     @Override
-    public List<Contacto> listar(int pageNumber) {
-        var contactos = em.createQuery("from Contacto c join fetch c.telefonos", Contacto.class);
+    public List<ContactoInfo> listar(int pageNumber) {
+        var contactos = em.createQuery("from Contacto c join fetch c.telefonos order by c.nombre", Contacto.class);
         contactos.setFirstResult((pageNumber - 1) * pageSize);
         contactos.setMaxResults(pageSize);
-        return contactos.getResultList();
+        var resultList = contactos.getResultList();
+        return resultList.stream().map(c -> c.toInfo()).toList();
     }
 }

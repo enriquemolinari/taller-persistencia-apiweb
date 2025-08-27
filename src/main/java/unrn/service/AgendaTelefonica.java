@@ -2,6 +2,7 @@ package unrn.service;
 
 import jakarta.persistence.EntityManagerFactory;
 import unrn.model.Contacto;
+import unrn.model.ContactoInfo;
 import unrn.model.NombreDeContacto;
 import unrn.model.NumeroTelefono;
 
@@ -31,7 +32,7 @@ public class AgendaTelefonica {
         });
     }
 
-    public List<Contacto> listarContactos(int pageNumber) {
+    public List<ContactoInfo> listarContactos(int pageNumber) {
         return emf.callInTransaction(em ->
                 repositoryOf(em, PAGE_SIZE).listar(pageNumber)
         );
