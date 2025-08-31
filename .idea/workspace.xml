@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="solo falta el test de integracion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/model/NombreDeContacto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/model/AgendaTelefonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/model/AgendaTelefonica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/EmfBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/EmfBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/model/AgendaTelefonicaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unrn/model/AgendaTelefonicaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/model/ContactoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unrn/model/ContactoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/tests-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/tests-data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,28 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Debug",
-    "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor": "Run",
-    "JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor": "Run",
-    "JUnit.ContactoTest.executor": "Run",
-    "JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor": "Run",
-    "JUnit.NumeroTelefonoTest.executor": "Run",
-    "JUnit.unrn.model in taller-persistencia-apiweb.executor": "Coverage",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "persistencia",
-    "kotlin-language-version-configured": "true",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.unrn.model in taller-persistencia-apiweb.executor&quot;: &quot;Coverage&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;persistencia&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="unrn.model" />
