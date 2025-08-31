@@ -1,5 +1,18 @@
 # Taller - Persistencia, Servicios Web y Testing Automatizado
 
+Este repositorio contiene diferentes ramas donde vamos iterando el desarrollo de un pequeño sistemas sobre una agenda de
+teléfonos.
+
+- Branches
+    - [main](https://github.com/enriquemolinari/taller-persistencia-apiweb): Modelo de dominio y
+      tests unitarios.
+    - [persistencia](https://github.com/enriquemolinari/taller-persistencia-apiweb/tree/persistencia): Le agregamos
+      JPA/Hibernate, más tests de integración.
+    - [persistencia-con-repositorio](https://github.com/enriquemolinari/taller-persistencia-apiweb/tree/persistencia-con-repositorio):
+      Refactorizamos un poco AgendaTelefonica para usar repositorios.
+    - [capa-web-service-repositorios](https://github.com/enriquemolinari/taller-persistencia-apiweb/tree/capa-web-service-repositorios):
+      Agregamos una capa web con SpringBoot y exponemos la funcionalidad mediante un servicio REST.
+
 ## Diseño Bottom-up vs Top-Down
 
 El diseño Top-Down consiste en comenzar con una visión general del sistema y descomponerla en partes más pequeñas y
@@ -62,167 +75,6 @@ cliente. Luego se escriben los tests de colaboración entre objetos (con mocks) 
             });
             assertEquals("Mensaje de error esperado", ex.getMessage());
         ```
-
-## Persistencia
-
-- Para persistencia usaremos JPA 3.2
-  y [Hibernate 7](https://docs.jboss.org/hibernate/orm/7.0/introduction/html_single/Hibernate_Introduction.html)
-
-- Agregamos dependencias en pom.xml
-- Definimos cuál clase representa el sistema.
-    - Será `AgendaTelefonica`
-    - No la vamos a mapear como entidad porque manejar los contactos como collecion mapeada uno a muchos, dado que la
-      cantidad de contactos puede ser grande sabemos que no performa bien.
-    - Esta clase representa la entrada a la lógica de negocios del sistema.
-    - Responsabilidades:
-        - Gestiona las Transacciones
-        - Sus servicios reciben tipos primitivos, o estructuras de datos simples.
-        - Crea instancias del modelo, invoca sus servicios y los coordina.
-        - Persiste o remueve si es necesario.
-- Agrego Mapeos
-    - Entidades con Id`@Entity`, `@Id`
-    - Lombok: `@NoArgsConstructor(access = AccessLevel.PROTECTED)`, `@Getter(AccessLevel.PRIVATE)`, `@Setter(
-      AccessLevel.PRIVATE)`
-    - Y relaciones.
-- Al implementar `AgendaTelefonica.agregarContacto(...)`
-    - Se vuelve necesario validar el nombre de contacto cuya validación se encuentra en `Contacto`.
-    - ¿Cómo reuso esa validación? Con un value object:`NombreDeContacto`.
-- Al implementar `AgendaTelefonica.listarContactos()`
-    - No puedo devolver grafos de objetos proxieados.
-    - Además tengo que paginar si devuelvo colecciones.
-
-## Testing Integracion
-
-- [Hibernate 7 Docs](https://docs.jboss.org/hibernate/orm/7.0/introduction/html_single/Hibernate_Introduction.html#testing).
-- ¿Qué testeamos aca?
-    - End to end desde la clase de entrada a mi modelo, hasta la BD
-    - Cambiamos la BD real para usar una en memoria (para que sea más rapido).
-    - Cada test debe iniciar con la BD en el mismo estado (no hay dependencia entre los tests idealmente).
-    - No re-testear lógica cubierta por tests del modelo.
-    - Verifica persistencia real y recuperación de objetos de la BD
-
-### Repositorios
-
-> For each type of object that needs global access, create an object that can provide the illusion of an in-memory
-> collection of all objects of that type. Set up access through a well-known global interface. Provide methods to *add*
-> and *remove* objects, which will encapsulate the actual insertion or removal of data in the data store. Provide
-> methods that *select objects based on some criteria* and return *fully instantiated objects* or collections of objects
-> whose attribute values meet the criteria, thereby encapsulating the actual storage and query technology. Provide
-> REPOSITORIES only for AGGREGATE roots that actually need direct access. Keep the client focused on the model,
-> delegating all object storage and access to the REPOSITORIES. **Eric Evans DDD Book**.
-
-- Collection-like interface. Con semántica de un Set (sin repetidos).
-    - add(Contacto contacto)
-    - remove(Contacto contacto)
-    - Optional<Contacto> findByName(String name)
-    - Optional<Contacto> findById(Long id)
-    - List<Contacto> findXXX(...)
-- Un Repository por agregate root.
-- Se instancian recibiendo la transacción iniciada por quien lo inova.
-- Otra idea clave es que no necesitas "volver a guardar" los objetos modificados que ya están en el Repositorio.
-  Piensa nuevamente en cómo modificarías un objeto que forma parte de una colección. En realidad, es muy simple: solo
-  recuperarías de la colección la referencia al objeto que deseas modificar y luego le pedirías al objeto que ejecute
-  algún comportamiento de transición de estado invocando un método de comando. Implementing Domain Driven Design Vaughn
-  Vernon.
-    - Esto es posible por persistencia por alcance. No tiene que ver con el patron repositorio, sino que tiene que ver
-      con el ORM utilizado para implementar el repositorio.
-
-## Servicios Web
-
-En términos de arquitectura de software, un `servicio` es una aplicación o proceso que se encuentra *escuchando* en un
-determinado host y puerto. Esperando recibir solicitudes de otros programas (clientes).
-Un **servicio web** es un tipo especial de servicio que:
-
-- Utiliza protocolos web como HTTP o HTTPS para comunicarse,
-- Expone su funcionalidad a través de URLs,
-
-Se llama *web* porque se construye sobre tecnologías propias de la web (como HTTP, URIs y formatos como JSON o XML).
-
-Los servicios web permiten:
-
-- Separar el frontend (cliente) del backend (servidor),
-- Reutilizar lógica de negocio o datos en distintas interfaces (por ejemplo, web, móvil, otros sistemas),
-
-### Reglas generales para nombres de URIs API REST
-
-- ✅ Usar **nombres de recursos en plural**
-- ✅ Usar **nombres sustantivos, no verbos**
-- ✅ Evitar extensiones como `.json`, `.xml` en la URI
-- ✅ El **verbo va en el método HTTP**, no en la URI
-
-### 🔸 GET
-
-| Acción                  | URI ejemplo                      | Descripción                     |
-|-------------------------|----------------------------------|---------------------------------|
-| Obtener todos           | `GET /users`                     | Lista de usuarios               |
-| Obtener uno             | `GET /users/{id}`                | Usuario por ID                  |
-| Sub-recursos            | `GET /users/{id}/posts`          | Posts del usuario               |
-| Filtro con query params | `GET /products?category=zapatos` | Filtrar productos por categoría |
-
----
-
-### 🔸 POST
-
-| Acción            | URI ejemplo                  | Descripción                    |
-|-------------------|------------------------------|--------------------------------|
-| Crear recurso     | `POST /users`                | Crear un nuevo usuario         |
-| Crear sub-recurso | `POST /users/{id}/telefonos` | Crear un post para ese usuario |
-
----
-
-### 🔸 PUT
-
-| Acción             | URI ejemplo       | Descripción                        |
-|--------------------|-------------------|------------------------------------|
-| Reemplazar recurso | `PUT /users/{id}` | Reemplaza completamente al usuario |
-
----
-
-### 🔸 DELETE
-
-| Acción           | URI ejemplo          | Descripción             |
-|------------------|----------------------|-------------------------|
-| Eliminar recurso | `DELETE /users/{id}` | Borra un usuario por ID |
-
-## Otros Casos
-
-| Caso           | URI ejemplo                | Descripción        |
-|----------------|----------------------------|--------------------|
-| Login          | `POST /auth/login`         | Autenticación      |
-| Logout         | `POST /auth/logout`        | Cierre de sesión   |
-| Acción puntual | `POST /orders/{id}/cancel` | Cancelar una orden |
-
-## ✅ Códigos de respuesta recomendados
-
-| Método | Código recomendado          | Cuándo usarlo                          |
-|--------|-----------------------------|----------------------------------------|
-| GET    | `200 OK`                    | Recurso(s) obtenido(s) correctamente   |
-| POST   | `201 Created`               | Recurso creado exitosamente            |
-| PUT    | `200 OK` / `204 No Content` | Actualización o creación de recurso    |
-| DELETE | `200 OK` / `204 No Content` | Ok o Eliminación exitosa sin contenido |
-
-### SpringBoot
-
-### Exception Handling Global
-
-- Queremos manejar las excepciones de forma global y para ello el framework Web que usamos en general nos da una forma
-  de hacerlo.
-- Usar `@RestControllerAdvice` para anotar una clase que maneje excepciones globalmente.
-- Dentro de esa clase, podemos definir métodos que manejen excepciones específicas usando
-  `@ExceptionHandler(Exception.class)`.
-
-### Testing Integracion Servicios Web
-
-- MockMvc and WebTestClient: [Spring Docs](https://docs.spring.io/spring-framework/reference/testing.html).
-- MockMvc ejecuta el controller y todo el stack en memoria, sin servidor, sin red. Perfecto para tests de integración
-  rápidos y realistas a nivel de capa web.
-- La otra es WebTestCliente como cliente y levantar un server real con @SpringBootTest(webEnvironment =
-  WebEnvironment.DEFINED_PORT o RANDOM_PORT))
-- Teniendo Tests escritos unitario y de integración a nivel servicio. ¿Qué podemos testear de la capa web?
-    - Todo lo relacionado a las pocas líneas de código que debería haber en el controlador. Pero principalmente:
-        - Que lleguen bien los parametros
-        - Que retorne el json que esperamos en el formato que esperamos
-        - Que retorne errores en el formato que esperamos.
 
 ## Troubleshooting
 
