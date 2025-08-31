@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="saco la explicacion de la capa web">
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/console/ContactosImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/main/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/model/ContactoInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/unrn/web/NuevoContacto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AppTestConfiguration.java" afterDir="false" />
+    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="agrego capa web">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/model/Contacto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/repositorios/ContactoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/repositorios/ContactoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/web/AppTestConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AppTestConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,33 +59,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.AgendaTelefonicaControllerTest.executor": "Run",
-    "JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor": "Run",
-    "JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor": "Run",
-    "JUnit.ContactoTest.executor": "Run",
-    "JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor": "Run",
-    "JUnit.NumeroTelefonoTest.executor": "Run",
-    "JUnit.model in taller-persistencia-apiweb.executor": "Run",
-    "JUnit.unrn.model in taller-persistencia-apiweb.executor": "Coverage",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindow.Run.ShowToolbar": "false",
-    "git-widget-placeholder": "capa-web-service-repositorios",
-    "kotlin-language-version-configured": "true",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AgendaTelefonicaControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.model in taller-persistencia-apiweb.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.unrn.model in taller-persistencia-apiweb.executor&quot;: &quot;Coverage&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindow.Run.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;capa-web-service-repositorios&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="unrn.model" />
@@ -105,7 +94,7 @@
       <recent name="unrn.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AgendaTelefonicaControllerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="unrn.main.Main" />
       <module name="taller-persistencia-apiweb" />
@@ -175,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AgendaTelefonicaControllerTest" />
         <item itemvalue="JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk" />
         <item itemvalue="JUnit.AgendaTelefonicaTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.model in taller-persistencia-apiweb" />
       </list>
     </recent_temporary>
@@ -231,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755991160095</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="agrego capa web">
+      <option name="closed" value="true" />
+      <created>1756254942420</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756254942420</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +248,8 @@
     <MESSAGE value="solo falta el test de integracion" />
     <MESSAGE value="adding workspace.xml" />
     <MESSAGE value="saco dependencias comentadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="saco dependencias comentadas" />
+    <MESSAGE value="agrego capa web" />
+    <option name="LAST_COMMIT_MESSAGE" value="agrego capa web" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -268,8 +266,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/model/NumeroTelefono.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

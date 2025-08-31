@@ -19,7 +19,7 @@ public class AppTestConfiguration {
     }
 
     @Bean
-    public AgendaTelefonica twitter(EntityManagerFactory emf) {
+    public AgendaTelefonica agenda(EntityManagerFactory emf) {
         return new AgendaTelefonica(emf);
     }
 }
