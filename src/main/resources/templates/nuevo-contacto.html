@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nuevo Contacto</title>
+</head>
+<body>
+<div th:replace="layout :: layout(~{::section})">
+    <section>
+        <h1>Alta de Contacto</h1>
+        <form method="post" th:action="@{/contactos}" th:object="${nuevoContacto}">
+            <div class="mb-3">
+                <label class="form-label" for="nombre">Nombre:</label>
+                <input class="form-control" id="nombre" required th:field="*{nombre}" type="text"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="codigoArea">Código de Área:</label>
+                <input class="form-control" id="codigoArea" maxlength="4" minlength="4" required
+                       th:field="*{codigoArea}"
+                       type="text"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="telefono">Teléfono:</label>
+                <input class="form-control" id="telefono" maxlength="7" minlength="6" required th:field="*{telefono}"
+                       type="text"/>
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>
