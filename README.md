@@ -39,22 +39,27 @@
 - Capa **muy fina** que expone las capa de servicios como servicios web/http.
 - Anotamos la clase con `@Controller` para que Spring la detecte y sepa que es un controlador.
 - Anotamos los métodos con `@GetMapping`, `@PostMapping`, segun el método HTTP.
-- Los parámetros de los métodos pueden ser anotados con `@RequestParam`, `@PathVariable`, `@RequestBody`, etc.
-- El retorno del método se convierte automáticamente a JSON (o XML si se configura) y se envía en la respuesta HTTP.
+- Los parámetros de los métodos pueden ser anotados con `@RequestParam`, `@PathVariable`, etc.
+- Aparece `Model` que permite pasar datos a la vista.
 
 #### Returning Views
 
-- SpringBoot se encarga de hacerlo por defecto usando Jackson.
-- Pero, necesitamos que las clases tengan `getters` para que Jackson pueda serializar los atributos.
-- Aca es donde hay que definir si quiero acoplar mi modelo de dominio a las clientes REST o no.
+- Server Side Rendering (SSR): El servidor genera la vista (HTML) y la envía al cliente.
+- Retornamos el nombre de la vista (sin extensión) y Spring la resuelve.
+- Por defecto Spring Boot usa Thymeleaf como motor de vistas.
+- Las vistas se encuentran en `src/main/resources/templates`.
+- Thymeleaf permite mezclar HTML con expresiones especiales para mostrar datos dinámicos.
+- Ejemplo: `${contactos}` para mostrar la lista de contactos.
+- Thymeleaf tiene su propia sintaxis para iterar, condicionales, etc.
 
 ### Exception Handling Global
 
 - Queremos manejar las excepciones de forma global y para ello el framework Web que usamos en general nos da una forma
   de hacerlo.
-- Usar `@RestControllerAdvice` para anotar una clase que maneje excepciones globalmente.
+- Usar `@ControllerAdvice` para anotar una clase que maneje excepciones globalmente.
 - Dentro de esa clase, podemos definir métodos que manejen excepciones específicas usando
   `@ExceptionHandler(Exception.class)`.
+- Devolvemos una instancia de un `ModelAndView` con la vista de error y los detalles del error.
 
 ### Testing Integracion Controllers Web
 
