@@ -12,6 +12,8 @@ teléfonos.
       Refactorizamos un poco AgendaTelefonica para usar repositorios.
     - [capa-web-service-repositorios](https://github.com/enriquemolinari/taller-persistencia-apiweb/tree/capa-web-service-repositorios):
       Agregamos una capa web con SpringBoot y exponemos la funcionalidad mediante un servicio REST.
+    - [capa-web-con-mvc](https://github.com/enriquemolinari/taller-persistencia-apiweb/tree/capa-web-mvc):
+      Agregamos una capa web con SpringBoot y MVC clásico, usando thymeleaf para las vistas.
 
 ## Diseño Bottom-up vs Top-Down
 
