@@ -72,8 +72,8 @@
 - Teniendo Tests escritos unitario y de integración a nivel servicio. ¿*Qué podemos testear de la capa web*?
     - Todo lo relacionado a las pocas líneas de código que debería haber en el controlador. Pero principalmente:
         - Que pasa si llega o no llegan los parámetros (query params, path variables, body).
-        - Que retorne el json que esperamos en el formato que esperamos
-        - Que retorne errores en el formato que esperamos (manejo de exceptions).
+        - Que retorne la *vista que esperamos* y el *model* tenga los *atributos* que la vista espera.
+        - Que las vistas manejen los errores.
 
 ### Maven: compiler and builder
 
