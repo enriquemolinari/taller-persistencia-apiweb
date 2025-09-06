@@ -13,6 +13,8 @@ import java.util.List;
 
 @Controller
 public class AgendaTelefonicaController {
+    public static final String LISTA_CONTACTOS_VIEW = "lista-contactos";
+    public static final String CONTACTOS_ATRIBUTE_NAME = "contactos";
     private final AgendaTelefonica agendaTelefonica;
 
     public AgendaTelefonicaController(AgendaTelefonica agendaTelefonica) {
@@ -36,7 +38,7 @@ public class AgendaTelefonicaController {
     @GetMapping("/contactos")
     public String contactos(@RequestParam int page, Model model) {
         List<ContactoInfo> contactos = this.agendaTelefonica.listarContactos(page);
-        model.addAttribute("contactos", contactos);
-        return "lista-contactos";
+        model.addAttribute(CONTACTOS_ATRIBUTE_NAME, contactos);
+        return LISTA_CONTACTOS_VIEW;
     }
 }

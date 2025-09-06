@@ -11,6 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 @ControllerAdvice
 public class AgendaTelefonicaGlobalExceptionHandler {
 
+    public static final String ERROR_MESSAGE_KEY = "errorMessage";
+    public static final String ERROR_VIEW_NAME = "error";
+
     //las que lanza SpringMVC cuando el Body o cualquier otro parametro requerido no viene
     //las que lanza mi modelo o servicio
     @ExceptionHandler(RuntimeException.class)
@@ -25,8 +28,8 @@ public class AgendaTelefonicaGlobalExceptionHandler {
     }
 
     private ModelAndView buildModelAndView(String errorMessage) {
-        var mv = new ModelAndView("error");
-        mv.addObject("errorMessage", errorMessage);
+        var mv = new ModelAndView(ERROR_VIEW_NAME);
+        mv.addObject(ERROR_MESSAGE_KEY, errorMessage);
         return mv;
     }
 

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="adding thymeleaf and creating a layout with bootstrap">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="adding error handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/web/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,7 @@
     "Application.Main.executor": "Run",
     "JUnit.AgendaTelefonicaControllerTest.executor": "Run",
     "JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor": "Run",
+    "JUnit.AgendaTelefonicaControllerTest.getContactos_sinParametroPage_error400.executor": "Run",
     "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
     "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
     "JUnit.AgendaTelefonicaTest.executor": "Run",
@@ -94,7 +94,7 @@
       <recent name="unrn.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AgendaTelefonicaControllerTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="unrn.main.Main" />
       <module name="taller-persistencia-apiweb" />
@@ -139,6 +139,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AgendaTelefonicaControllerTest.getContactos_sinParametroPage_renderizo_error_view" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taller-persistencia-apiweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unrn.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unrn.web" />
+      <option name="MAIN_CLASS_NAME" value="unrn.web.AgendaTelefonicaControllerTest" />
+      <option name="METHOD_NAME" value="getContactos_sinParametroPage_renderizo_error_view" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AgendaTelefonicaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taller-persistencia-apiweb" />
       <extension name="coverage">
@@ -154,21 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="model in taller-persistencia-apiweb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taller-persistencia-apiweb" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/unrn/model" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AgendaTelefonicaControllerTest" />
+        <item itemvalue="JUnit.AgendaTelefonicaControllerTest.getContactos_sinParametroPage_renderizo_error_view" />
         <item itemvalue="JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AgendaTelefonicaTest" />
-        <item itemvalue="JUnit.model in taller-persistencia-apiweb" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756685598998</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="adding error handling">
+      <option name="closed" value="true" />
+      <created>1756774327502</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756774327502</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,7 +292,8 @@
     <MESSAGE value="rename method" />
     <MESSAGE value="improving readme" />
     <MESSAGE value="adding thymeleaf and creating a layout with bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding thymeleaf and creating a layout with bootstrap" />
+    <MESSAGE value="adding error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding error handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,24 +309,17 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/unrn/service/AgendaTelefonica.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/unrn/model/NumeroTelefono.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/taller_persistencia_apiweb$AgendaTelefonicaControllerTest_getContactos_listaContactosOk.ic" NAME="AgendaTelefonicaControllerTest.getContactos_listaContactosOk Coverage Results" MODIFIED="1756855834521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>unrn.web.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/taller_persistencia_apiweb$unrn_model_in_taller_persistencia_apiweb.ic" NAME="unrn.model in taller-persistencia-apiweb Coverage Results" MODIFIED="1754523876930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>unrn.model.*</FILTER>
     </SUITE>
