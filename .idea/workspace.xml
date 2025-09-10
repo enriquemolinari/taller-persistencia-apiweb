@@ -56,33 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.AgendaTelefonicaControllerTest.executor": "Run",
-    "JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.executor": "Run",
-    "JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor": "Run",
-    "JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor": "Run",
-    "JUnit.ContactoTest.executor": "Run",
-    "JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor": "Run",
-    "JUnit.NumeroTelefonoTest.executor": "Run",
-    "JUnit.model in taller-persistencia-apiweb.executor": "Run",
-    "JUnit.unrn.model in taller-persistencia-apiweb.executor": "Coverage",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindow.Run.ShowToolbar": "false",
-    "git-widget-placeholder": "capa-web-service-repositorios",
-    "kotlin-language-version-configured": "true",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaControllerTest.getContactos_listaContactosOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContactoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NumeroTelefonoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.model in taller-persistencia-apiweb.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.unrn.model in taller-persistencia-apiweb.executor&quot;: &quot;Coverage&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindow.Run.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;capa-web-service-repositorios&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="unrn.model" />
