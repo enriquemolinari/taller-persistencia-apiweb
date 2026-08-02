@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackgroundAgentGlobalSettings">
-    <option name="selectedModelId" value="claude-sonnet-4.6" />
+    <option name="selectedModelId" value="gpt-5.3-codex" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="689f4b60-ff27-409b-82a0-82c63948bff5" name="Changes" comment="update project SDK to OpenJDK 25 and clean up workspace configuration">
-      <change beforePath="$PROJECT_DIR$/.github/copilot-instructions.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/copilot-instructions.md" afterDir="false" />
+    <list default="true" id="aeff947c-866c-46e6-a27a-c65b0e81712b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/skills/modelo-objetos/SKILL.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/skills/modelo-objetos/SKILL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/skills/testing-automatizado/SKILL.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/skills/testing-automatizado/SKILL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/model/ContactoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/model/NumeroTelefonoTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +23,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
-      <entry key="_/home/enrique/workspaces/taller-persistencia-apiweb" value="3HMk6o3ds3piPtNAfsBbWyGT4c8" />
+      <entry key="_/home/enrique/workspaces/taller-persistencia-apiweb" value="3HN9mR3oeQOKxJNAjjUIvwpU6rR" />
     </persistenceIdMap>
   </component>
   <component name="Git.Settings">
@@ -36,10 +42,10 @@
   }
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
+  "customColor": "",
+  "associatedIndex": 2
 }]]></component>
-  <component name="ProjectId" id="3HMk6PjTlEQX2AegogWi6rHpkJn" />
+  <component name="ProjectId" id="3HN9m9cSuRZ04BYYijJS4F02176" />
   <component name="ProjectSessionTemplates">
     <option name="panelTemplate">
       <template>
@@ -47,7 +53,7 @@
         <option name="model">
           <model>
             <option name="modelType" value="builtin_id" />
-            <option name="modelValue" value="claude-sonnet-4.5" />
+            <option name="modelValue" value="gpt-5.3-codex" />
           </model>
         </option>
         <option name="targetType" value="BACKGROUND" />
@@ -75,9 +81,25 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="main" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,28 +110,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="689f4b60-ff27-409b-82a0-82c63948bff5" name="Changes" comment="" />
-      <created>1785685152088</created>
+      <changelist id="aeff947c-866c-46e6-a27a-c65b0e81712b" name="Changes" comment="" />
+      <created>1785697817852</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1785685152088</updated>
+      <updated>1785697817852</updated>
     </task>
-    <task id="LOCAL-00001" summary="update project SDK to OpenJDK 25 and clean up workspace configuration">
-      <option name="closed" value="true" />
-      <created>1785685258886</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1785685258886</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="update project SDK to OpenJDK 25 and clean up workspace configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="update project SDK to OpenJDK 25 and clean up workspace configuration" />
   </component>
 </project>

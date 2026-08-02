@@ -87,3 +87,11 @@ cliente. Luego se escriben los tests de colaboración entre objetos (con mocks) 
 - En Settings > Build, Execution, Deployment > Compiler > Java Compiler, en Javac Options, agregar:
     - -parameters
 - Luego ReBuild Project
+
+## Maven Wrapper
+
+Sirve para que el usuario no tenga que instalar Maven en su máquina, sino que se descargue automáticamente la versión configurada.
+
+```shell
+mvn wrapper:wrapper -Dmaven=3.8.7
+```

@@ -8,6 +8,18 @@ description: Guía para diseñar clases del modelo de dominio en Java siguiendo 
 - Proyecto Java 23 con paradigma orientado a objetos
 - Modelo de dominio implementa todas las reglas de negocio
 - Ubicación: `src/main/java/unrn/model/`
+- Comandos de consola disponibles para validación:
+  - `./mvnw test`
+  - `./mvnw verify` (ya configura fallo de build si cobertura < 90%)
+
+## Flujo Obligatorio al Generar Código en `src/main/java`
+
+Cada vez que crees o modifiques código en `src/main/java`:
+
+1. Ejecutá `./mvnw test` por consola.
+2. Ejecutá `./mvnw verify` por consola para revisar cobertura.
+3. Si fallan tests, realiza las modificaciones necesarias y vuelve a ejecutar los tests (no detenerse por ese motivo).
+4. Si tests pasan pero falla cobertura (< 90%), realiza las modificaciones necesarias y vuelve a ejecutar los tests hasta alcanzar el umbral.
 
 ## Principios Fundamentales
 

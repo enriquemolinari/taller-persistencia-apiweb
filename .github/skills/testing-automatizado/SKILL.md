@@ -9,6 +9,18 @@ description: Guía para escribir tests automatizados con JUnit 5.13 en este proy
 - Ubicación: `src/test/java/`
 - Tests unitarios en memoria (código real, sin mocks)
 - Tests de integración con base de datos
+- Comandos de consola disponibles:
+  - `./mvnw test`
+  - `./mvnw verify` (ya configura fallo de build si cobertura < 90%)
+
+## Flujo de Ejecución y Cobertura
+
+Cuando se genera o modifica código en `src/main/java`:
+
+1. Ejecutar `./mvnw test` por consola.
+2. Ejecutar `./mvnw verify` por consola para revisar cobertura.
+3. Si fallan los tests, realiza las modificaciones necesarias y vuelve a ejecutar los tests (no detenerse por ese motivo).
+4. Si los tests pasan pero falla cobertura (< 90%), realiza las modificaciones necesarias y vuelve a ejecutar los tests hasta cumplir el umbral.
 
 ## 1. Nomenclatura Clara y Descriptiva
 
