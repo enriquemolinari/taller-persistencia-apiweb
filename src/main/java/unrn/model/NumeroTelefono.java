@@ -1,51 +1,34 @@
 package unrn.model;
 
 public class NumeroTelefono {
-    static final String ERROR_CODIGO_INVALIDO = "El código de área debe tener 4 dígitos";
-    static final String ERROR_NUMERO_LARGO = "El número no debe tener más de 7 caracteres";
-    static final String ERROR_NUMERO_CORTO = "El número debe tener al menos 6 caracteres";
-    static final String ERROR_NUMERO_INVALIDO = "El número no puede ser null";
+    static final String ERROR_CODIGO_AREA_INVALIDO = "El codigo de area debe tener exactamente 4 digitos";
+    static final String ERROR_NUMERO_INVALIDO = "El numero debe tener entre 6 y 7 caracteres";
 
     private final String codigoArea;
     private final String numero;
 
-    NumeroTelefono(String codigoArea, String numero) {
-        assertCodigoArea(codigoArea);
-        assertNumberInvalido(numero);
-        assertNumeroLargo(numero);
-        assertNumeroCorto(numero);
+    public NumeroTelefono(String codigoArea, String numero) {
+        assertCodigoAreaValido(codigoArea);
+        assertNumeroValido(numero);
         this.codigoArea = codigoArea;
         this.numero = numero;
     }
 
-    private void assertNumberInvalido(String numero) {
-        if (numero == null) {
+    boolean esMismoNumero(NumeroTelefono otroNumero) {
+        return otroNumero != null
+                && codigoArea.equals(otroNumero.codigoArea)
+                && numero.equals(otroNumero.numero);
+    }
+
+    private void assertCodigoAreaValido(String codigoArea) {
+        if (codigoArea == null || !codigoArea.matches("\\d{4}")) {
+            throw new RuntimeException(ERROR_CODIGO_AREA_INVALIDO);
+        }
+    }
+
+    private void assertNumeroValido(String numero) {
+        if (numero == null || numero.length() < 6 || numero.length() > 7) {
             throw new RuntimeException(ERROR_NUMERO_INVALIDO);
         }
     }
-
-    public String numero() {
-        return codigoArea + " " + numero;
-    }
-
-    private void assertCodigoArea(String codigoArea) {
-        if (codigoArea == null ||
-                codigoArea.length() != 4 ||
-                !codigoArea.chars().allMatch(Character::isDigit)) {
-            throw new RuntimeException(ERROR_CODIGO_INVALIDO);
-        }
-    }
-
-    private void assertNumeroLargo(String numero) {
-        if (numero.length() > 7) {
-            throw new RuntimeException(ERROR_NUMERO_LARGO);
-        }
-    }
-
-    private void assertNumeroCorto(String numero) {
-        if (numero.length() < 6) {
-            throw new RuntimeException(ERROR_NUMERO_CORTO);
-        }
-    }
 }
-
