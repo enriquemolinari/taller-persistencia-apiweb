@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unrn/main/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,32 +57,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AgendaTelefonicaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContactoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NumeroTelefonoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.model in taller-persistencia-apiweb.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.unrn.model in taller-persistencia-apiweb.executor&quot;: &quot;Coverage&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;persistencia-con-repositorio&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.general.GeneralConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega.executor": "Run",
+    "JUnit.AgendaTelefonicaTest.agregarNumeroAContactoExistente_numeroSeAgrega.executor": "Run",
+    "JUnit.AgendaTelefonicaTest.executor": "Run",
+    "JUnit.AgendaTelefonicaTest.listarContactos_agendaVacia_listaVacia.executor": "Run",
+    "JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta.executor": "Run",
+    "JUnit.ContactoTest.executor": "Run",
+    "JUnit.NumeroTelefonoTest.crearNumberoValido_retornaCodigoMasNumero.executor": "Run",
+    "JUnit.NumeroTelefonoTest.executor": "Run",
+    "JUnit.model in taller-persistencia-apiweb.executor": "Run",
+    "JUnit.unrn.model in taller-persistencia-apiweb.executor": "Coverage",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "persistencia-con-repositorio",
+    "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.general.GeneralConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="unrn.model" />
@@ -88,22 +92,7 @@
       <recent name="unrn.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.model in taller-persistencia-apiweb">
-    <configuration name="AgendaTelefonicaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taller-persistencia-apiweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unrn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unrn.service" />
-      <option name="MAIN_CLASS_NAME" value="unrn.service.AgendaTelefonicaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.unrn in taller-persistencia-apiweb">
     <configuration name="AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taller-persistencia-apiweb" />
       <extension name="coverage">
@@ -159,13 +148,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="unrn in taller-persistencia-apiweb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taller-persistencia-apiweb" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/unrn" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.unrn in taller-persistencia-apiweb" />
         <item itemvalue="JUnit.model in taller-persistencia-apiweb" />
         <item itemvalue="JUnit.ContactoTest.crearContacto_nombreValido_instanciaCorrecta" />
         <item itemvalue="JUnit.ContactoTest" />
         <item itemvalue="JUnit.AgendaTelefonicaTest.agregarContactoNuevo_contactoSeAgrega" />
-        <item itemvalue="JUnit.AgendaTelefonicaTest" />
       </list>
     </recent_temporary>
   </component>
