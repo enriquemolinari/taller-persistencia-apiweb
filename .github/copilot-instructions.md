@@ -99,7 +99,6 @@ private void assertContactoUnico(Contacto contacto) {
 
 ### 8. Testing de Integración
 
-- Usamos test-data.sql como set up inicial de la BD.
 - Siempre usar como beforeEach el truncate ya que resetea la base de datos despues de cada test que corre:
 
 ```java
