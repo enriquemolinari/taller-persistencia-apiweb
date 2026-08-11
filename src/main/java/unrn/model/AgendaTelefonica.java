@@ -14,7 +14,6 @@ public class AgendaTelefonica {
     }
 
     public void agregarContacto(String nombre, String codigoArea, String telefono) {
-        //validar nombre, como reuso la validacion dentro de Contacto ?
         var numeroTelefono = new NumeroTelefono(codigoArea, telefono);
         emf.runInTransaction(em -> {
             var nombreContacto = new NombreDeContacto(nombre);
