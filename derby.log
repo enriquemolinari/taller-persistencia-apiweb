@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Aug 08 21:04:08 GMT-03:00 2026:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-019f-e3d5-83bc-000001dbe298 
+Fri Aug 14 18:50:06 GMT-03:00 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-01a0-0240-f2da-0000017b2ba8 
 on database directory memory:/home/enrique/workspaces/taller-persistencia-apiweb/contactos with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
 Loaded from file:/home/enrique/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
 java.vendor=Oracle Corporation

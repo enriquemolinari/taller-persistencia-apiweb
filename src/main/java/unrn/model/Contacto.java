@@ -35,7 +35,7 @@ public class Contacto {
         return contacto;
     }
 
-    public void nuevoNumero(NumeroTelefono numeroTelefono) {
+    void nuevoNumero(NumeroTelefono numeroTelefono) {
         this.telefonos.add(numeroTelefono);
     }
 
@@ -46,7 +46,7 @@ public class Contacto {
     public int cantidadDeTelefonos() {
         return this.telefonos.size();
     }
-    
+
     public boolean tieneElTelefono(String telefono) {
         return this.telefonos.stream()
                 .anyMatch(numero -> numero.numero().equals(telefono));
