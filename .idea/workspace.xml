@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="agrego link a branch sobre capa web mvc">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3e9fb755-8ff6-4065-bcbe-8e50735b2e69" name="Changes" comment="upgrade to springboot 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unrn/web/AgendaTelefonicaControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756653124339</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="upgrade to springboot 4">
+      <option name="closed" value="true" />
+      <created>1786923517755</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1786923517755</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +266,8 @@
     <MESSAGE value="saco dependencias comentadas" />
     <MESSAGE value="agrego capa web" />
     <MESSAGE value="rename method" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename method" />
+    <MESSAGE value="upgrade to springboot 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade to springboot 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -275,16 +281,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/unrn/service/AgendaTelefonicaTest.java</url>
           <line>20</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/unrn/repositorios/JpaContactoRepository.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/unrn/web/AgendaTelefonicaGlobalExceptionHandler.java</url>
