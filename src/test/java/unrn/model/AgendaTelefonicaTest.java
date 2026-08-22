@@ -39,6 +39,8 @@ class AgendaTelefonicaTest {
         String codigoArea = "0299";
         String telefono = "1234567";
         // setup
+
+        //ejercitacion
         agenda.agregarContacto(nombre, codigoArea, telefono);
 
         // Assert
