@@ -7,6 +7,7 @@ import org.hibernate.cfg.JdbcSettings;
 import org.hibernate.tool.schema.Action;
 import unrn.model.Contacto;
 import unrn.model.NumeroTelefono;
+import unrn.model.Usuario;
 
 public class EmfBuilder {
     public static final String DB_USER = "app";
@@ -21,6 +22,7 @@ public class EmfBuilder {
         config = new PersistenceConfiguration("miniTwitter")
                 .managedClass(Contacto.class)
                 .managedClass(NumeroTelefono.class)
+                .managedClass(Usuario.class)
                 .property(PersistenceConfiguration.JDBC_USER, DB_USER)
                 .property(PersistenceConfiguration.JDBC_PASSWORD, DB_PWD)
                 .property(JdbcSettings.SHOW_SQL, true)

@@ -24,6 +24,9 @@ public class Contacto {
     @JoinColumn(name = "contacto_id")
     private List<NumeroTelefono> telefonos;
 
+//    @ManyToOne
+//    private Usuario usuario;
+
     public Contacto(NombreDeContacto nombre) {
         this.nombre = nombre;
         this.telefonos = new ArrayList<>();

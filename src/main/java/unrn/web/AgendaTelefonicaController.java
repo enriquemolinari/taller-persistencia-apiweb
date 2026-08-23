@@ -25,5 +25,4 @@ public class AgendaTelefonicaController {
     public List<ContactoInfo> contactos(@RequestParam int page) {
         return this.agendaTelefonica.listarContactos(page);
     }
-
 }
