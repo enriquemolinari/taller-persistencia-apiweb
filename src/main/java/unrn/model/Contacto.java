@@ -24,8 +24,8 @@ public class Contacto {
     @JoinColumn(name = "contacto_id")
     private List<NumeroTelefono> telefonos;
 
-//    @ManyToOne
-//    private Usuario usuario;
+    @ManyToOne
+    private Usuario usuario;
 
     public Contacto(NombreDeContacto nombre) {
         this.nombre = nombre;
@@ -40,6 +40,10 @@ public class Contacto {
 
     public void nuevoNumero(NumeroTelefono numeroTelefono) {
         this.telefonos.add(numeroTelefono);
+    }
+
+    void duenioDelContacto(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public boolean esDe(String nombre) {

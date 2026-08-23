@@ -35,10 +35,11 @@ public class AgendaTelefonicaControllerTest {
         emf.getSchemaManager().truncate();
 
         agenda = new AgendaTelefonica(emf);
-        agenda.agregarContacto("Ana Torres", "0299", "1234567");
-        agenda.agregarContacto("Ana Torres", "0299", "7654321");
-        agenda.agregarContacto("Luis Pérez", "0114", "654321");
-        agenda.agregarContacto("Mia Solis", "0114", "234567");
+        agenda.registrarUsuario("usuarioUno", "password");
+        agenda.agregarContacto(1, "Ana Torres", "0299", "1234567");
+        agenda.agregarContacto(1, "Ana Torres", "0299", "7654321");
+        agenda.agregarContacto(1, "Luis Pérez", "0114", "654321");
+        agenda.agregarContacto(1, "Mia Solis", "0114", "234567");
     }
 
     @Test

@@ -16,5 +16,5 @@ public interface ContactoRepository {
 
     void agregar(Contacto contacto);
 
-    List<ContactoInfo> listar(int pageNumber);
+    List<ContactoInfo> listar(Integer userId, int pageNumber);
 }

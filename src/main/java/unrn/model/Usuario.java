@@ -20,7 +20,7 @@ public class Usuario {
     //ojo, nunca debe escaparse con un getter...
     private String password;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuario")
     private List<Contacto> contactos;
 
@@ -29,7 +29,12 @@ public class Usuario {
         //encriptar antes de guardar
         this.password = password;
     }
-    
+
+    public void agregarContacto(Contacto contacto) {
+        this.contactos.add(contacto);
+        contacto.duenioDelContacto(this);
+    }
+
     public int identificador() {
         return id;
     }

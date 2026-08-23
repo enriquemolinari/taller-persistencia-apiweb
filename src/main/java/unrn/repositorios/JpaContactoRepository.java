@@ -28,8 +28,9 @@ class JpaContactoRepository implements ContactoRepository {
     }
 
     @Override
-    public List<ContactoInfo> listar(int pageNumber) {
-        var contactos = em.createQuery("from Contacto c join fetch c.telefonos order by c.nombre", Contacto.class);
+    public List<ContactoInfo> listar(Integer userId, int pageNumber) {
+        var contactos = em.createQuery("from Contacto c join fetch c.telefonos where c.usuario.id = :userId order by c.nombre", Contacto.class);
+        contactos.setParameter("userId", userId);
         contactos.setFirstResult((pageNumber - 1) * pageSize);
         contactos.setMaxResults(pageSize);
         var resultList = contactos.getResultList();
