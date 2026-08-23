@@ -25,7 +25,10 @@ public class AgendaTelefonicaControllerTest {
 
     @Autowired
     private EntityManagerFactory emf;
+    @Autowired
     private AgendaTelefonica agenda;
+    private Integer idUsuario;
+    private Integer idUsuario2;
 
     @Autowired
     private MockMvc mockMvc;
@@ -34,18 +37,19 @@ public class AgendaTelefonicaControllerTest {
     void setUp() {
         emf.getSchemaManager().truncate();
 
-        agenda = new AgendaTelefonica(emf);
-        agenda.registrarUsuario("usuarioUno", "password");
-        agenda.agregarContacto(1, "Ana Torres", "0299", "1234567");
-        agenda.agregarContacto(1, "Ana Torres", "0299", "7654321");
-        agenda.agregarContacto(1, "Luis Pérez", "0114", "654321");
-        agenda.agregarContacto(1, "Mia Solis", "0114", "234567");
+        idUsuario = agenda.registrarUsuario("usuarioUno", "password");
+        idUsuario2 = agenda.registrarUsuario("usuarioDos", "password");
+        agenda.agregarContacto(idUsuario, "Ana Torres", "0299", "1234567");
+        agenda.agregarContacto(idUsuario, "Ana Torres", "0299", "7654321");
+        agenda.agregarContacto(idUsuario, "Luis Pérez", "0114", "654321");
+        agenda.agregarContacto(idUsuario, "Mia Solis", "0114", "234567");
+        agenda.agregarContacto(idUsuario2, "Carlos", "0178", "698580");
     }
 
     @Test
     @DisplayName("GET /contactos devuelve la lista de contactos correctamente")
     void getContactos_listaContactosOk() throws Exception {
-        mockMvc.perform(get("/contactos?page=1"))
+        mockMvc.perform(get("/contactos?page=1" + "&idUser=" + idUsuario))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(3)))
@@ -60,7 +64,7 @@ public class AgendaTelefonicaControllerTest {
     @Test
     @DisplayName("GET /contactos sin parámetro page retorna error 400 y JSON de error")
     void getContactos_sinParametroPage_error400() throws Exception {
-        mockMvc.perform(get("/contactos"))
+        mockMvc.perform(get("/contactos?idUser=" + idUsuario))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.message", is("Parámetros inválidos")));
@@ -70,6 +74,7 @@ public class AgendaTelefonicaControllerTest {
     @DisplayName("POST /contactos agrega un contacto válido correctamente")
     void postContactos_contactoValido_ok() throws Exception {
         String json = "{" +
+                "\"idUser\":" + idUsuario + "," +
                 "\"nombre\":\"Juan Perez\"," +
                 "\"codigoArea\":\"0114\"," +
                 "\"telefono\":\"999999\"}";
@@ -84,6 +89,7 @@ public class AgendaTelefonicaControllerTest {
     @DisplayName("POST /contactos con campos vacíos retorna error 400 y JSON de error")
     void postContactos_camposVacios_error400() throws Exception {
         String json = "{" +
+                "\"idUser\":" + idUsuario + "," +
                 "\"nombre\":\"\"," +
                 "\"codigoArea\":\"\"," +
                 "\"telefono\":\"\"}";
@@ -100,6 +106,7 @@ public class AgendaTelefonicaControllerTest {
     @DisplayName("POST /contactos con JSON inválido retorna error 400 y JSON de error")
     void postContactos_jsonInvalido_error400() throws Exception {
         String json = "{" +
+                "\"idUser\":" + idUsuario + "," +
                 "\"nombre\":\"Juan\"," +
                 "\"codigoArea\":\"0114\"}"; // Falta teléfono
         // Ejercitación y Verificación

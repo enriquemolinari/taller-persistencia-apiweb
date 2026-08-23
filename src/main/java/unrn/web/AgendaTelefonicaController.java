@@ -19,13 +19,12 @@ public class AgendaTelefonicaController {
     @PostMapping("/contactos")
     public void agregarContacto(@RequestBody NuevoContacto nuevoContacto) {
         //TODO: falta authenticacion
-        this.agendaTelefonica.agregarContacto(1, nuevoContacto.nombre(), nuevoContacto.codigoArea(), nuevoContacto.telefono());
+        this.agendaTelefonica.agregarContacto(nuevoContacto.idUser(), nuevoContacto.nombre(), nuevoContacto.codigoArea(), nuevoContacto.telefono());
     }
 
     @GetMapping("/contactos")
-    public List<ContactoInfo> contactos(@RequestParam int page) {
-        //TODO: para que usuario
-        return null;
-        //return this.agendaTelefonica.listarContactos(page);
+    public List<ContactoInfo> contactos(@RequestParam int page, @RequestParam int idUser) {
+        //TODO: falta authenticacion
+        return this.agendaTelefonica.listarContactos(idUser, page);
     }
 }
