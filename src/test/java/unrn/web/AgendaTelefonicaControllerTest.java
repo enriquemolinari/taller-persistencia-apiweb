@@ -22,14 +22,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles(value = "test-integracion")
 public class AgendaTelefonicaControllerTest {
-
+    //Al ser una clase de TEST, donde JUnit crea las instancias, necesitas autowire.
     @Autowired
     private EntityManagerFactory emf;
     @Autowired
     private AgendaTelefonica agenda;
     private Integer idUsuario;
     private Integer idUsuario2;
-
     @Autowired
     private MockMvc mockMvc;
 
