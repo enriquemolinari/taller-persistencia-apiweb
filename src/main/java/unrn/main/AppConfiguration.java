@@ -14,8 +14,8 @@ public class AppConfiguration {
     public AgendaTelefonica create() {
         var emf = new EmfBuilder()
                 //en memoria para demo
-                //.memory()
-                .clientAndServer()
+                .memory()
+//                .clientAndServer()
                 //ojo, cada vez que levanto la app se borran los datos
                 .withDropAndCreateDDL()
                 .build();
