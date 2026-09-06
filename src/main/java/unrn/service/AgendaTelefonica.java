@@ -48,6 +48,14 @@ public class AgendaTelefonica {
         });
     }
 
+    public Integer verificarTokenAndGetIdUsuario(String token) {
+        try {
+            return escribano().verificarToken(token);
+        } catch (Exception e) {
+            throw new RuntimeException("Token inválido", e);
+        }
+    }
+
     public Integer registrarUsuario(String username, String password) {
         return emf.callInTransaction(em -> {
             var usuarioOptional = UsuarioRepository.repositoryOf(em).buscarPorUsername(username);

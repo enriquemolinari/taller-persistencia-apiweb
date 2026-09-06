@@ -24,6 +24,7 @@ public class Escribano {
     public String generarTokenPara(int userId) {
         return Jwts.builder()
                 .claim(ID_CLAIM_KEY, userId)
+                //.expiration(Date.from(LocalDateTime.now().plusHours(1).atZone(java.time.ZoneId.systemDefault()).toInstant()))
                 .signWith(signatureKey)
                 .compact();
     }

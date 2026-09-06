@@ -1,7 +1,7 @@
 package unrn.web;
 
 public record NuevoContacto(
-        Integer idUser, // inseguro, falta authenticacion
+        Integer idUser, // inseguro, ELIMINAR
         String nombre,
         String codigoArea,
         String telefono) {

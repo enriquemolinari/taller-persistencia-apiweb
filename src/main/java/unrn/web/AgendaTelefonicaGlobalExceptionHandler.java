@@ -3,6 +3,7 @@ package unrn.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.MissingRequestCookieException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -23,15 +24,23 @@ public class AgendaTelefonicaGlobalExceptionHandler {
 
     @ExceptionHandler({HttpMessageNotReadableException.class,
             MissingServletRequestParameterException.class})
-    public ResponseEntity<ErrorResponse> handleSpringMVCParams() {
+    public ResponseEntity<ErrorResponse> handleSpringMVCParams(Exception e) {
         ErrorResponse error = new ErrorResponse(
                 "Parámetros inválidos");
         return ResponseEntity.badRequest().body(error);
     }
 
+    //Atrapa cuando falta la cookie de autenticación (token) en el request: @CookieValue(required = true) String token
+    @ExceptionHandler({MissingRequestCookieException.class})
+    public ResponseEntity<ErrorResponse> handleSpringMVCCookie(Exception e) {
+        ErrorResponse error = new ErrorResponse(
+                "Tenes que autenticarse para acceder a este servicio");
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
+    }
+
     //cualquier otra
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleException() {
+    public ResponseEntity<ErrorResponse> handleException(Exception e) {
         ErrorResponse error = new ErrorResponse(
                 "Algo salió mal... contacte a bla bla");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
