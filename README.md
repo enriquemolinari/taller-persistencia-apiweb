@@ -36,3 +36,52 @@ acceder a recursos o servicios.
 
 - Todo servicio web que requiera autenticación debe verificar el token JWT en la cabecera de la petición. El `idUsuario`
   se **debe obtener** del token, nunca confiar en lo que viene por parámetro respecto a la autenticación.
+
+## Diagrama de secuencia: Sesión tradicional (PHP 5) vs JWT
+
+```text
+SESION TRADICIONAL (stateful, previo a JWT y las aplicaciones SPA)
+==================================================================
+Participantes: Cliente | Servidor | BD Usuarios | Store de Sesiones (persistente)
+
+Cliente                Servidor                BD Usuarios              Store de Sesiones
+   |                       |                         |                            |
+   |--- login(user,pass) ->|                         |                            |
+   |                       |--- validar credenciales- > |
+   |                       |<-- credenciales OK ----- |
+   |                       |--- generar sessionId unico (UUID/random)            |
+   |                       |--- persistir (sessionId -> datosUsuario) ---------->|
+   |                       |<-- persistido OK -----------------------------------|
+   |<-- Set-Cookie: sessionId=abc123 --|                                         |
+   |                       |                         |                            |
+   |--- request + Cookie(sessionId=abc123) --------->|                            |
+   |                       |--- buscar sessionId ------------------------------->|
+   |                       |<-- datosUsuario ------------------------------------|
+   |<-- respuesta autorizada ------------|                                       |
+
+- `sessionId` es un identificador unico.
+- La relacion `sessionId -> datosUsuario` DEBE persistirse (BD relacional, disco, memoria compartida, etc).
+
+
+JWT (stateless)
+===============
+Participantes: Cliente | Servidor | BD Usuarios
+
+Cliente                Servidor                BD Usuarios
+   |                       |                         |
+   |--- login(user,pass) ->|                         |
+   |                       |--- validar credenciales- > |
+   |                       |<-- credenciales OK ----- |
+   |                       |--- generar JWT con claims (idUsuario, roles, exp)  |
+   |                       |--- firmar JWT (HMAC/RSA)                            |
+   |<-- token JWT firmado (en cookie) --|                                       |
+   |                       |                         |
+   |--- request + JWT ---->|                         |
+   |                       |--- verificar firma + exp del JWT                    |
+   |                       |--- leer claims del token (idUsuario, etc)           |
+   |<-- respuesta autorizada --|                                                 |
+
+Clave del modelo:
+- El JWT NO se persiste como sesion en servidor.
+- La informacion de usuario viaja dentro del token firmado.
+```

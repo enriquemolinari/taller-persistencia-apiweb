@@ -15,8 +15,9 @@ public class JpaUsuarioRepository implements UsuarioRepository {
 
     @Override
     public Optional<Usuario> buscarPorUsernameAndPassword(String username, String password) {
-        var existe = em.createQuery("from Usuario u where u.username = :username", Usuario.class);
+        var existe = em.createQuery("from Usuario u where u.username = :username and u.password = :password", Usuario.class);
         existe.setParameter("username", username);
+        existe.setParameter("password", password);
         return Optional.ofNullable(existe.getSingleResultOrNull());
     }
 

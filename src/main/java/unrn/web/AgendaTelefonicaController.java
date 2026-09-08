@@ -10,7 +10,7 @@ import unrn.service.AgendaTelefonica;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 public class AgendaTelefonicaController {
     //¿Cómo se construye AgendaTelefonica para inyectarla acá?
     private final AgendaTelefonica agendaTelefonica;
