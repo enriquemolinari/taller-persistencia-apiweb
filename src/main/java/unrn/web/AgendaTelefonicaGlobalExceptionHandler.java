@@ -35,8 +35,8 @@ public class AgendaTelefonicaGlobalExceptionHandler {
 
     //cualquier otra
     @ExceptionHandler(Exception.class)
-    public ModelAndView handleException() {
-        return buildModelAndView("Algo salió mal, intente nuevamente");
+    public ModelAndView handleException(Exception e) {
+        return buildModelAndView("Algo salió mal, intente nuevamente. " + e.getMessage());
     }
 
 }
